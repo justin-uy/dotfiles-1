@@ -4,6 +4,9 @@
 .vim/swaps/*
 .vim/undo
 
+# vim bundles
+.vim/autoload
+
 # git credential file
 .gitconfig.local
 
@@ -24,11 +27,6 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
-
-# fish shell
-fishd.*
-.config/fish/fish_history
-fish/fish_history
 
 # random
 shilocation
