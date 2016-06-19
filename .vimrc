@@ -12,7 +12,7 @@ set nocompatible
 set t_Co=256
 set background=dark
 syntax on
-colorscheme molotov
+colorscheme brogrammer 
 " }}}
 
 " Mapleader {{{
@@ -28,7 +28,9 @@ set undodir=~/.vim/undo
 " Set some junk {{{
 set autoindent " Copy indent from last line when starting new line
 set backspace=indent,eol,start
+set colorcolumn=80 " Highlight line 80
 set cursorline " Highlight current line
+set cursorcolumn " Hightlight current column
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set encoding=utf-8 nobomb " BOM often causes trouble
@@ -605,7 +607,6 @@ augroup syntastic_config
 augroup END
 " }}}
 
-
 " Plugins -------------------------------------------------------------
 
 " Load plugins {{{
@@ -639,7 +640,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/fish.vim',   { 'for': 'fish' }
 Plug 'vim-scripts/jade.vim',   { 'for': 'jade' }
 Plug 'wavded/vim-stylus',      { 'for': 'stylus' }
 Plug 'wlangstroth/vim-racket'
