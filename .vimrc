@@ -12,7 +12,7 @@ set nocompatible
 set t_Co=256
 set background=dark
 syntax on
-colorscheme brogrammer 
+colorscheme Benokai 
 " }}}
 
 " Mapleader {{{
@@ -607,6 +607,13 @@ augroup syntastic_config
 augroup END
 " }}}
 
+" NERDTree.vim {{{
+augroup nerdtree_config
+  autocmd!
+  let NERDTreeShowHidden=1
+augroup END
+" }}}
+
 " Plugins -------------------------------------------------------------
 
 " Load plugins {{{
@@ -631,6 +638,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-fugitive'
@@ -648,5 +656,3 @@ Plug 'xolox/vim-notes'
 
 call plug#end()
 " }}}
-execute pathogen#infect()
-call pathogen#helptags()
