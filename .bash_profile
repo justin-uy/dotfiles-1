@@ -68,25 +68,9 @@ export NVM_DIR="$HOME/.nvm"
 ## Completion…
 ##
 
-if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
-    return 1 2> /dev/null || exit 1;
-fi;
-
 # bash completion.
-# if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-#     source "$(brew --prefix)/share/bash-completion/bash_completion";
-# elif [ -f /etc/bash_completion ]; then
-#     source /etc/bash_completion;
-# fi;
-
-# homebrew completion
-if  which brew > /dev/null; then
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-fi;
-
-# hub completion
-if  which hub > /dev/null; then
-    source "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
+if  which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    source "$(brew --prefix)/etc/bash_completion";
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
