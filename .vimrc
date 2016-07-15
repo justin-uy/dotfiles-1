@@ -223,6 +223,10 @@ augroup general_config
   endfunction " }}}
   noremap <leader>ss :call StripWhitespace ()<CR>
   " }}}
+  
+  " Remove trailing whitespace on save
+  autocmd BufWritePre * %s/\s\+$//e
+  " }}}
 
   " Join lines and restore cursor location (J) {{{
   nnoremap J mjJ`j
