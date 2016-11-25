@@ -12,7 +12,7 @@ set nocompatible
 set t_Co=256
 set background=dark
 syntax on
-colorscheme Benokai 
+colorscheme OceanicNext
 " }}}
 
 " Mapleader {{{
@@ -24,6 +24,9 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 " }}}
+"
+
+set backupcopy=yes
 
 " Set some junk {{{
 set autoindent " Copy indent from last line when starting new line
@@ -223,7 +226,7 @@ augroup general_config
   endfunction " }}}
   noremap <leader>ss :call StripWhitespace ()<CR>
   " }}}
-  
+
   " Remove trailing whitespace on save
   autocmd BufWritePre * %s/\s\+$//e
   " }}}
@@ -634,11 +637,13 @@ Plug 'junegunn/goyo.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'mhartington/oceanic-next'
 Plug 'msanders/snipmate.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'oplatek/Conque-Shell'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
