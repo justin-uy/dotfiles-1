@@ -79,3 +79,6 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[user]
+	email = justin.uy@user.noreply.github.com
+	name = Justin Uy

@@ -63,7 +63,7 @@ export NVM_DIR="$HOME/.nvm"
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-
+export PATH=$PATH:/usr/local/go/bin
 ##
 ## Completion…
 ##
@@ -92,4 +92,3 @@ shopt -s nocaseglob;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
-
