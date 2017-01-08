@@ -58,13 +58,6 @@ cp_p () {
   rsync -WavP --human-readable --progress $1 $2
 }
 
-function to_stdin() {
-  #first arg is program
-  local pid=$(pidof $1)
-  # second arg is input file
-  cat $2 > "/proc/$pid/fd/0"
-}
-
 # get gzipped size
 function gz() {
 	echo "orig size    (bytes): "
@@ -82,7 +75,7 @@ function whois() {
 	echo "Getting whois record for: $domain …"
 
 	# avoid recursion
-					# this is the best whois server
+	# this is the best whois server
 													# strip extra fluff
 	/usr/bin/whois -h whois.internic.net $domain | sed '/NOTICE:/q'
 }
