@@ -35,7 +35,6 @@ set autoindent " Copy indent from last line when starting new line
 set backspace=indent,eol,start
 set colorcolumn=80 " Highlight line 80
 set cursorline " Highlight current line
-set cursorcolumn " Hightlight current column
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set encoding=utf-8 nobomb " BOM often causes trouble
@@ -623,6 +622,10 @@ augroup nerdtree_config
 augroup END
 " }}}
 
+if filereadable(".vim.custom")
+  so .vim.custom
+endif
+
 " Plugins -------------------------------------------------------------
 
 " Load plugins {{{
@@ -630,6 +633,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
+Plug 'fatih/vim-go'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'guns/vim-clojure-static'
 Plug 'joker1007/vim-ruby-heredoc-syntax'

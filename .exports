@@ -15,4 +15,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
 eval "$(gdircolors -b ~/.dircolors)"
 export PROJECTS=~/projects
+export GOROOT=~/go-versions/go1.7.4
+export PATH=$PATH:$GOROOT/bin
 export GOPATH=~/go-workspace
