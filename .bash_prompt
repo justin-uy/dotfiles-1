@@ -158,7 +158,5 @@ set_prompts() {
 
 }
 
-
-
 set_prompts
 unset set_prompts

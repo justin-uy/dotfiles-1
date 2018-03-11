@@ -1,21 +1,4 @@
 ##############################################################################################################
-### homebrew!
-
-# (if your machine has /usr/local locked down (like google's), you can do this to place everything in ~/.homebrew
-mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
-export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
-
-# install all the things
-./brew.sh
-./brew-cask.sh
-
-### end of homebrew
-##############################################################################################################
-
-
-
-
-##############################################################################################################
 ### install of common things
 ###
 
@@ -24,15 +7,6 @@ export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
 
-# Type `git open` to open the GitHub page or website for a repository.
-npm install -g git-open
-# trash as the safe `rm` alternative
-npm install --global trash-cli
-
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
-
-# for the c alias (syntax highlighted cat)
-sudo easy_install Pygments
 
 # apt-vim for vim plugin dependency management
 curl -sL https://raw.githubusercontent.com/egalpin/apt-vim/master/install.sh | sh
@@ -44,11 +18,6 @@ sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
 chsh -s $BASHPATH # will set for current user only.
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
 # Later, confirm iterm settings aren't conflicting.
-
-
-# setting up the sublime symlink
-ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
 
 ###
 ##############################################################################################################
