@@ -164,8 +164,8 @@ augroup general_config
   " }}}
 
   " Hard to type things {{{
-  iabbrev >> →
-  iabbrev << ←
+  " iabbrev >> →
+  " iabbrev << ←
   iabbrev ^^ ↑
   iabbrev VV ↓
   iabbrev aa λ
@@ -445,6 +445,12 @@ augroup filetype_clojure
 augroup END
 " }}}
 
+" Rust {{{
+augroup filetype_rust
+  autocmd!
+  let g:rustfmt_autosave = 1
+augroup END
+
 " Coffee {{{
 augroup filetype_coffee
   autocmd!
@@ -611,6 +617,8 @@ augroup syntastic_config
   let g:syntastic_error_symbol = '✗'
   let g:syntastic_warning_symbol = '⚠'
   let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+  let g:syntastic_cpp_compiler = 'clang++'
+  let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 augroup END
 " }}}
 
