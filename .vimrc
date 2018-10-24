@@ -449,6 +449,7 @@ augroup END
 augroup filetype_rust
   autocmd!
   let g:rustfmt_autosave = 1
+  let g:syntastic_rust_checkers = ['cargo']
 augroup END
 
 " Coffee {{{
@@ -594,13 +595,6 @@ augroup easy_align_config
   autocmd!
   vmap <Enter> <Plug>(EasyAlign) " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
   nmap <Leader>a <Plug>(EasyAlign) " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
-augroup END
-" }}}
-
-" Notes.vim {{{
-augroup notes_config
-  autocmd!
-  let g:notes_directories = ['~/Dropbox/Notes']
 augroup END
 " }}}
 
