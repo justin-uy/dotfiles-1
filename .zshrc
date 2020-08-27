@@ -97,4 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias ll="ls -la"
+alias v="vim"
+set -o vi
+
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 source .extras
